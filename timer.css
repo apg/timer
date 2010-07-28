@@ -1,0 +1,65 @@
+@-webkit-keyframes blink {
+  0% {
+   color: #fff;
+  }
+  25% {
+   color: #fff;
+  }
+  50% {
+   color: #aa0000;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+body {
+/* font-size: 62.5%;*/
+ font-family: Liberation Serif, Times;
+ background: #ffffff;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+}
+
+#wrapper {
+ margin: auto 0;
+}
+#wrapper.warning {
+ background: #ff0000;
+}
+
+#wrapper.warning #timer.playing {
+ color: #ffffff;
+}
+
+#wrapper.warning #timer.ohshit {
+ -webkit-animation-name: blink;
+ -webkit-animation-duration: 1s;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-timing-function: linear;
+}
+
+#wrapper.warning #timer.paused {
+ color: #0000aa;
+ -webkit-animation-name: blink;
+ -webkit-animation-duration: 1s;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-timing-function: linear;
+}
+
+#wrapper.warning #timer.stopped {
+ color: #ffffff;
+}
+
+#wrapper.ok #timer.playing {
+ color: #00aa00;
+}
+
+#wrapper.ok #timer.paused {
+ color: #0000ff;
+}
+
+#wrapper.ok #timer.stopped {
+ color: #ff0000;
+}
