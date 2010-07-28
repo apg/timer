@@ -9,7 +9,7 @@ I needed a simple timer for holding lightning talks, so I built one. You can see
 Who
 ---
 
-Andrew Gwozdziewycz originally made this for [http://hackandtell.org](Hack and Tell)
+Andrew Gwozdziewycz originally made this for [Hack and Tell](http://hackandtell.org).
 
 Usage
 -----
