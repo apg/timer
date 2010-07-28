@@ -14,5 +14,7 @@ Andrew Gwozdziewycz originally made this for [http://hackandtell.org](Hack and T
 Usage
 -----
 
-Just dump all the files in a directory and load up `index.html` in your browser. If you append `#10` to the url, you'll get a 10 minute timer. It defaults to 5
+Just dump all the files in a directory and load up `index.html` in your browser. If you append `#10` to the url, you'll get a 10 minute timer. It defaults to 5.
+
+Double click on the time resets it. Single click pauses/unpauses.
 

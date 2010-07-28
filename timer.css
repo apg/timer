@@ -63,3 +63,7 @@ body {
 #wrapper.ok #timer.stopped {
  color: #ff0000;
 }
+
+#sound {
+ display: none;
+}
