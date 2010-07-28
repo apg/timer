@@ -1,3 +1,7 @@
+/**
+ * (c) 2010, Andrew Gwozdziewycz, GPL licensed, see LICENSE
+ */
+
 var Timer = function(time, e, b) {
   this.length = time;
   this.element = e;
@@ -8,8 +12,8 @@ var Timer = function(time, e, b) {
   this._timeleft = time;
   this._lasttick = null;
 
-  // private state
   this.init();
+  this.reset();
 };
 
 Timer.c = {
@@ -36,6 +40,12 @@ Timer.prototype = {
     });
     this.displayTimeFor(this._timeleft);
   },
+  'reset': function() {
+    this._interval = null;
+    this._status = Timer.c.STOPPED;
+    this._timeleft = this.length;
+    this._lasttick = null;
+  },
   'onclick': function(e) {
     if (this._status == Timer.c.STOPPED ||
         this._status == Timer.c.PAUSED) {
@@ -46,6 +56,7 @@ Timer.prototype = {
     }
   },
   'ondblclick': function(e) {
+    this.reset();
     this.stop();
   },
   'ontick': function() {
@@ -111,7 +122,7 @@ Timer.prototype = {
 jQuery(document).ready(function($) {
   var hash = window.location.hash.substring(1);
   var mins = parseInt(hash) > 0? parseInt(hash): 5;
-  new Timer(60 * mins, $('#timer'), $('#wrapper'));
+  new Timer(10 * mins, $('#timer'), $('#wrapper'));
   $('#timer').fit({width: $(window).width(), height: $(window).height()});
 
   $(window).resize(function() {
